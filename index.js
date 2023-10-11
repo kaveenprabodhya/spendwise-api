@@ -189,7 +189,7 @@ app.get('/:userId/transactions/', (req, res) => {
  */
 
 const users = [
-    { email: 'user@example.com', password: 'password123' },
+    {id: uuidv4(), name: "user", email: 'user@example.com', password: 'password123' },
     // Add more users as needed
   ];
   
