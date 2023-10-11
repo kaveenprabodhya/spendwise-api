@@ -189,7 +189,7 @@ app.get('/:userId/transactions/', (req, res) => {
  */
 
 const users = [
-    {id: uuidv4(), name: "user", email: 'user@example.com', password: 'password123' },
+    { id: uuidv4(), name: "user", email: 'user@example.com', password: 'password123' },
     // Add more users as needed
   ];
   
@@ -224,7 +224,7 @@ const users = [
       res.status(400).json({ message: 'User with this email already exists' });
     } else {
       // Create a new user
-      const newUser = { name, email, password };
+      const newUser = { id: uuidv4(), name, email, password };
       users.push(newUser);
       res.status(201).json(newUser);
     }
