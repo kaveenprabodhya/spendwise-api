@@ -197,8 +197,8 @@ const users = [
     const { email, password } = req.body;
   
     // Check if the provided email and password match any user in the users array
-    const user = users.find(u => u.email === email && u.password === password);
   
+    const user = users.find(u => u.email === email && u.password === password);
     if (user) {
       // Authentication successful
       res.status(200).json({ message: 'Authentication successful' });
