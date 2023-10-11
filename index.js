@@ -25,8 +25,8 @@ app.get('/:userId/budgets/overall', (req, res) => {
 // Create a new budget for a user
 app.post('/:userId/budgets', (req, res) => {
     const userId = req.params.userId;
+    console.log(req.body)
     const newBudget = req.body;
-    newBudget.userId = userId;
 
     // Handle creating a new budget for the specified user ID
     budgets.push(newBudget);
